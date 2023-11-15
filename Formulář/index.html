@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <h1> 
+
+        <ins> Reklamace zboží </ins>
+
+    </h1>
+
+
+    <form method="post" action="http://jecna.lmsoft.cz/form.php">
+
+        <div class="inputgroup">
+
+        <label for="jmeno"> Jméno: 
+        <input type="text" id="jmeno" name="jmeno"> </label> 
+
+        </div>
+
+        <div class="inputgroup">
+
+        <label for="prijmeni"> Příjmení: 
+        <input type="text" id="prijmeni" name="prijmeni"> </label> 
+
+        </div>
+
+
+        <div class="description">
+
+            <textarea name="popiszbozi" placeholder="Popište problém" rows="7" cols="50"></textarea>
+
+        </div>
+
+
+        <div class="radio">
+
+            <div>
+            <label for="radio"> Opravit zboží
+            <input type="radio" name="type" value="repair"> </label>
+            </div>
+
+            <div>
+            <label for="radio"> Nové zboží
+            <input type="radio" name="type" value="new"> </label>
+            </div>
+
+        </div>
+
+
+        <div class="selectgroup">
+    
+        <select name="kraje"> 
+        
+            <option selected disabled> Zvolte váš kraj </option>
+            <option value="praha"> Hlavní město Praha </option>  
+            <option value="stredocesky"> Středočeský kraj </option>  
+            <option value="jihocesky"> Jihočeský kraj </option>  
+            <option value="plzensky">  Plzeňský kraj </option> 
+            <option value="karlovarsky"> Karlovarský kraj</option>  
+            <option value="ustecky">  Ústecký kraj </option>  
+            <option value="liberecky"> Liberecký kraj </option>  
+            <option value="kralovehradecky"> Královéhradecký kraj  </option>  
+            <option value="pardubicky"> Pardubický kraj </option>  
+            <option value="vysocina"> Kraj Vysočina</option>  
+            <option value="jihomorava"> Jihomoravský kraj </option>  
+            <option value="zlinsky"> Zlínský kraj </option>  
+            <option value="olomoucky"> Olomoucký kraj </option>  
+            <option value="moravskoslezko"> Moravskoslezský kraj </option>  
+
+        </select>
+
+        </div>
+
+
+        <div class="choosefile">
+
+            <input type="file" name="soubor"> 
+
+        </div>
+
+
+        <div class = "submit">
+
+        <input type="submit" value="Odeslat">
+
+        </div>
+
+    </form>
+
+
+</body>
+
+
+</html>

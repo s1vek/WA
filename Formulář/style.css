@@ -1,0 +1,35 @@
+h1 {
+
+text-align: center;
+
+}
+
+.inputgroup{
+
+    margin: 10px;
+    text-align: center;
+
+}
+
+.description, .radio, .submit{
+
+    text-align: center;
+
+}
+
+.choosefile {
+
+    margin: 10px;
+    text-align: center;
+    margin-left: 120px;
+
+
+}
+
+.selectgroup {
+
+    margin: 10px;
+    text-align: center;
+
+}
+
