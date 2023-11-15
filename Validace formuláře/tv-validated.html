@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///c%3A/Users/zdend/OneDrive/Plocha/prezentace/tv-validace.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <title>TV dotazník</title>
+ 
+</head>
+
+<body>
+
+    <h1>TV dotazník</h1>
+
+    <form action="file:///C:/Users/zdend/Downloads/form%20table%20(1).html" method="post">
+        <div>
+            <label for="jmeno">Jméno a příjmení</label>
+            <input type="text" id="jmeno" name="jmeno" required="">
+        </div>
+
+        <div class="vek">
+            <p>Kolik vám je let?</p>
+            <input type="radio" id="vek18" name="vek" value="18" required="">
+            <label for="vek18">18 a méně</label><br>
+            <input type="radio" id="vek19" name="vek" value="19" required="">
+            <label for="vek19">19 až 64</label><br>
+            <input type="radio" id="vek65" name="vek" value="65" required="">
+            <label for="vek65">65 a více</label>
+        </div>
+
+        <div class="tv">
+            <p>V jakých zařízeních sledujete TV?</p>
+            <input type="checkbox" id="tvTelevize" name="tv[]" value="Televize" required="">
+            <label for="tvTelevize">Televize</label><br>
+            <input type="checkbox" id="tvPocitac" name="tv[]" value="Počítač">
+            <label for="tvPocitac">Počítač</label><br>
+            <input type="checkbox" id="tvMobil" name="tv[]" value="Mobil">
+            <label for="tvMobil">Mobil</label>
+        </div>
+
+        <div class="favorite">
+            <label for="libi">Co se vám líbí na TV?</label> <br>
+            <textarea id="libi" name="libi" rows="4" cols="50" required=""></textarea>
+        </div>
+
+        <div class="fee">
+            <label for="poplatky">Jakou výši poplatků jste ochotni platit?</label>
+          
+            <input type="text" id="poplatky" name="poplatky" required="">
+        </div>
+
+        <div class="submit">
+            <input type="submit" value="Odeslat">
+        </div>
+
+    </form>
+
+
+
+
+
+</body></html>
