@@ -1,0 +1,57 @@
+ 
+ table {
+    border-collapse: collapse;
+ }
+
+ td, th {
+    width:50px;
+    height:50px;
+    text-align: center;
+ }
+
+tr td:nth-child(odd) {
+
+    background-color: black;
+    border: 1px solid black;
+
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+
+    background-color: yellow;
+    border: 1px solid black;
+
+}
+
+tr td:nth-child(even) {
+
+    background-color: black;
+    border: 1px solid black;
+
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+
+    background-color: yellow;
+    border: 1px solid black;
+
+}
+
+/* Úprava 4. řádku*/
+tr:nth-child(4) td:nth-child(even) {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+tr:nth-child(4) td:nth-child(odd) {
+    background-color: black;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
