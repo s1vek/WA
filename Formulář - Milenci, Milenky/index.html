@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+    <h1> 
+    
+        <ins> Evidence milenců a milenek </ins>
+    
+    </h1>
+
+    <form method="post" action="http://jecna.lmsoft.cz/form.php">
+
+
+        <div class="inputgroup">
+
+            <label for="jmeno"> Jméno:
+                <input type="text" id="jmeno" name="jmeno" placeholder="Jméno" required> </label>
+            
+        </div>
+
+        <div class="inputgroup">
+
+            <label for="prijmeni"> Příjmení:
+                <input type="text" id="prijmeni" name="prijmeni" placeholder="Příjmení" required> </label>
+            
+        </div>
+
+        <div class="inputgroup">
+
+            <label for="email"> Email:
+                <input type="text" id="email" name="email" placeholder="Email"> </label>
+            
+        </div>
+
+        
+        <div class="select2">
+            
+            <label for="narozeni">Datum narození:</label>
+            <input type="date" id="narozeni" name="narozeni" required>
+
+       </div>
+
+       <div class = "radio" >
+
+        <label for="radio"> Muž
+            <input type="radio" name="type" value="muz" ></label>
+
+        <label for="radio"> Žena
+            <input type="radio" name="type" value="zena"></label>
+
+         <label for="radio"> Nechci uvádět
+            <input type="radio" name="type" value="bez"></label>
+
+    </div>
+
+
+        <div class="selectgroup">
+
+            <label for="puvod"> Váš původ: 
+
+            <select name="puvod">
+
+                <option value="belgie"> Belgie </option>
+                <option value="bulharsko"> Bulharsko </option>
+                <option value="cesko"> Česká republika</option>
+                <option value="dansko"> Dánsko </option>
+                <option value="estonsko"> Estónsko </option>
+                <option value="finsko"> Finsko </option>
+                <option value="francie"> Francie </option>
+                <option value="chorvatsko"> Chrovatsko </option>
+                <option value="irsko"> Irsko </option>
+                <option value="italie"> Itálie </option>
+                <option value="kypr"> Kypr </option>
+                <option value="litva"> Litva </option>
+                <option value="lotyssko"> Lotyšsko </option>
+                <option value="lucembursko"> Lucembursko </option>
+                <option value="madarsko"> Maďarsko </option>
+                <option value="Malta"> Malta </option>
+                <option value="nemecko"> Německo </option>
+                <option value="nizozemsko"> Nizozemsko</option>
+                <option value="polsko"> Polsko </option>
+                <option value="portugalsko"> Portugalsko </option>
+                <option value="rakousko"> Rakousko </option>
+                <option value="rumunsko"> Rumunsko </option>
+                <option value="recko"> Řecko</option>
+                <option value="slovensko"> Slovensko </option>
+                <option value="slovinsko"> Slovinsko </option>
+                <option value="spanelsko"> Španělsko </option>
+                <option value="svedsko"> Švédsko </option>
+
+            </select>
+        </label>
+
+        </div>
+
+        <div class="number" >
+
+            <label for="photo"> Telefonní číslo:
+                <input type="tel" id="phone" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+
+            </label>
+
+
+        </div>
+
+
+        <div class="description">
+
+            <textarea name="informace" placeholder="Řekněte něco zajímavého o vás!" rows="7" cols="50"></textarea>
+
+
+        </div>
+
+        <div class="inputgroup">
+
+            <label for="prace"> Povolání/Studium:
+                <input type="text" id="prace" name="prace" placeholder="Povolání/Studium" required> </label>
+            
+        </div>
+
+        <div class="photo">
+
+            <label for="photo"> Nahrajte vlastní profilovku</label>
+            <input type="file" name="soubor"> 
+
+        </div>
+
+        <div class="submit" >
+
+            <input type="submit" value="Pojďme najít váš protejšek!">
+
+        </div>
+
+
+
+
+
+
+
+    </form>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,21 @@
+body{
+
+background-color: pink;
+
+}
+
+
+
+.inputgroup, .selectgroup, .select2, .description, h1, .radio, .number, .submit {
+
+text-align: center;
+margin: 15px;
+
+}
+
+.photo {
+
+text-align: center;
+margin-left: 75px;
+
+}
