@@ -1,0 +1,75 @@
+body {
+
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: black; 
+    
+}
+
+.utilitybar {
+
+    width: 100%;
+    font-size: 15px;
+    height: 30px;
+    display: flex;
+    background-color: #5472d2;
+    align-content: stretch;
+    align-items: center;
+    font-size: 12px;
+    
+ }
+
+.utilitybar ul {
+
+    color: white;
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+
+}
+
+.idesign-logo {
+
+    height: 70px;
+    width: 280px;
+
+}
+
+h1, h2 {
+
+    color: #5476d5
+
+}
+
+
+.nav-container ul {
+
+    gap: 70px;
+    list-style-type: none;
+    border-bottom: 1px solid #96a9e3;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.iheader {
+
+    border-bottom: 1px solid #96a9e3;
+
+}
+
+
+
+.sub-menu li, .trans {
+
+    display: none;
+
+}
+
+
+.vc_row {
+
+    font-size: 20px;
+
+}
