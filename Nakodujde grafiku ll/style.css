@@ -1,0 +1,43 @@
+body {
+
+    margin: 0;
+    
+
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    background-color: #0071bd;
+    height: 100px;
+
+}
+
+
+/* mezery mezi ctvercema je zhruba 20px 
+*/
+
+h1 {
+
+    color: white;
+    
+}
+
+.boxcontainer {
+
+    max-width: 1200px;
+
+
+
+}
+
+footer {
+
+    display: grid;
+    align-items: center;
+    background-color: #662e91;
+    height: 180px;
+
+}
+
