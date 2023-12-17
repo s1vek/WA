@@ -32,13 +32,14 @@ header {
 
 .u{
 
+    background-color: #81b8df;
+    color: white;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px; 
-    background-color: #81b8df;
-    color: white;
+    
 }
 
 
@@ -48,14 +49,6 @@ header {
     height: 60px;
     justify-self: end;
     margin-left: 20px;
-    
-}
-
-h1 {
-
-    color: white;
-    justify-self: start;
-    font-size: 40px;
     
 }
 
@@ -72,6 +65,14 @@ h1 {
     padding: 10px;
 }
 
+
+h1 {
+
+    color: white;
+    justify-self: start;
+    font-size: 40px;
+    
+}
 
 .boxcontainer {
 
@@ -94,9 +95,7 @@ h1 {
     font-size: 15px;
     text-align: center;
     color: white;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  
+    
 }
 
 .by1{
