@@ -1,0 +1,400 @@
+@page {
+	size: A4;
+	margin: 12mm;
+	orphans: 4;
+	widows: 2;
+}
+
+@font-face {
+	font-family: 'TeXGyreBonum';
+	src: local('TeXGyreBonum-Regular'),url('/font/hinted-TeXGyreBonum-Regular.woff2') format('woff2'),url('/font/hinted-TeXGyreBonum-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media print {
+	* {
+		font-family: "TeXGyreBonum", Verdana, Geneva, sans-serif;
+		font-size: 11pt;
+		padding: 0;
+		margin: 0;
+	}
+	pre, p.pre {
+		/* font-family: Verdana, Geneva, sans-serif;
+		font-size: 12px; */
+		font-weight: normal;
+		white-space: pre-wrap;	
+		word-wrap: break-word;
+		overflow: auto;
+	}
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}
+	h1, h1 a, h1 .label, h1 * {
+		font-size: 20pt;
+		font-weight: bold;
+		text-decoration: none;
+		color: #000;
+		text-align: center;
+		margin: 8pt 0 8pt 0;
+	}
+	h1, .h1-print-only {
+		page-break-before: avoid;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		position: relative
+	}
+	.h1-print-only {
+		font-size: 16pt;
+		font-weight: bold;
+		text-decoration: none;
+		color: #000;
+		text-align: center;
+		margin: 8pt 0 8pt 0;
+	}
+	h2, h3, h4, .sectionHead {
+		page-break-before: auto;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		position: relative
+	}
+	.sectionBody {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		position: relative
+	}
+	h2, h2 span {
+		font-size: 15pt;
+		margin: 10pt 0 5pt 0;
+	}
+	h3, .sectionHead {
+		font-size: 17pt;
+		margin: 10pt 0 2pt 0;
+	}
+	p {
+		line-height: 18pt;
+		margin: 0 0 5pt 0;
+		page-break-before: avoid;
+		page-break-inside: avoid;
+		font-size: 10pt;
+		position: relative
+	}
+	p, p a, p strong, ul li {
+		color: black;
+		text-decoration: none;
+		font-size: 11pt;
+		line-height: 15pt;
+	}
+	a, a img {
+		border: none;
+		color: black;
+		text-decoration: none;
+	}
+	ul {
+		margin: 0 0 5pt 0;
+	}
+	ul li {
+		margin: 4pt 0 4pt 15pt;
+		list-style-type: disc;
+		list-style-position: outside;
+	}
+	form.listConfigure {
+		padding: 5pt;
+		border-top: solid 2px black;
+		border-bottom: solid 2px black;
+		margin-bottom: 5pt;
+	}
+	form.listConfigure select {
+		margin-right: 5pt;
+		border: none;
+		background: none;
+	}
+	form.listConfigure label {
+		font-style: bold;
+	}
+	table {
+		border: solid 1px #000;
+		Border-spacing: 0px;
+		page-break-inside: auto;
+		font-size: 10pt;
+		position: relative;
+	}
+	table tr {
+		page-break-inside: avoid;
+		page-break-after: auto
+	}
+	table  thead {
+		display: table-header-group
+	}
+	table  tfoot {
+		display: table-footer-group
+	}
+	table tr th, table tr td {
+		border: solid 1pt #000;
+		-webkit-border-radius: 0pt;
+		-moz-border-radius: 0pt;
+		border-radius: 0pt;
+		background-color: white;
+		page-break-inside: avoid !important;
+	}
+	table.timetable th, table.timetable td {
+		padding: 0;
+	}
+	table.timetable td.empty {
+		height: 17mm;
+	}
+	table.timetable th.day {
+		padding: 0 1mm 0 1mm;
+	}
+	table.timetable div.lesson1, table.timetable div.lesson2, table.timetable div.lesson3
+		{
+		padding: 0 2mm 0 2mm;
+	}
+	table.timetable th, table.timetable td span, table.timetable th, table.timetable td a
+		{
+		font-size: 3.5mm;
+	}
+	table.timetable td .room, table.timetable td .class {
+		display: block;
+		float: left;
+		margin: 0;
+	}
+	table.timetable td .subject {
+		display: block;
+		text-align: center;
+		margin: 0;
+		font-weight: bold;
+		font-size: 5mm;
+		padding-top: 13pt;
+		margin-bottom: 4pt;
+		letter-spacing: .5mm;
+	}
+	div.timetable div.lesson2 .subject, div.timetable div.lesson3 .subject {
+		padding-top: 10pt;
+		margin-bottom: 0pt;
+		font-size: 12pt;
+	}
+	table.timetable td .employee, table.timetable td .group {
+		display: block;
+		float: right;
+		margin: 0;
+		font-weight: normal;
+	}
+	table.timetable th {
+		font-size: 9pt;
+	}
+	table.timetable th.period {
+		padding: 3pt 0 3pt 0;
+	}
+	table.timetable th.period span.time {
+		font-size: 8.5pt;
+		display: block;
+		font-weight: normal;
+		letter-spacing: -0.8pt;
+	}
+	div.timetable div.versionLink {
+		display: none;
+	}
+	div.timetable .versionInfo {
+		font-size: 12px;
+		margin: 5px 0 0 0;
+	}
+	div.timetable div.lesson2, div.timetable div.lesson3 {
+		border-top: dotted 2pt #000;
+		display: block;
+		clear: both;
+		margin-top: 3mm;
+		padding-top: 1mm;
+		padding-bottom: 1mm;
+	}
+	div.timetable div.lessonFirst {
+		border-top: none;
+		margin-top: 0;
+	}
+	table.userprofile {
+		margin: 5pt 0 10pt 0;
+	}
+	table.userprofile th {
+		text-align: right;
+		padding: 5pt;
+		background-color: #fff;
+		font-weight: normal;
+		font-style: italic;
+		color: #555;
+	}
+	table.userprofile td {
+		text-align: left;
+		padding: 5pt;
+		background-color: #fff;
+	}
+	form table td, form table th {
+		padding: 5pt;
+		border: none;
+		vertical-align: bottom;
+	}
+	form fieldset {
+		-webkit-border-radius: 3pt;
+		-moz-border-radius: 3pt;
+		border-radius: 3pt;
+	}
+	a.itemCreate {
+		display: none;
+	}
+	.print-only {
+		display: block;
+	}
+	.no-print {
+		display: none;
+	}
+	.head {
+		display: none;
+	}
+	body {
+		/* margin: 3cm 1cm 0 1cm;
+		width: 19cm; */
+		margin: 0mm;
+		border: initial;
+		border-radius: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		/*page-break-after: always;*/
+	}
+	.menu-viewrole {
+		display: none;
+	}
+	.column-right {
+		display: none;
+	}
+	.backLinks, .recomendedLinks {
+		display: none;
+	}
+	form .buttons, form .descriptionButton, .link-button {
+		display: none;
+	}
+	ul.menuTile {
+		display: none;
+	}
+	form fieldset {
+		margin: 0;
+		padding: 0pt;
+		border: none;
+	}
+	form th {
+		text-align: right;
+		padding: 5pt;
+		font-weight: normal;
+		font-size: 12pt;
+	}
+	form td input, form td select {
+		border: none;
+		border-bottom: dotted 1pt #000;
+		padding-top: 4pt;
+		background: none;
+		background-color: #fff;
+		font-size: 12pt;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		margin: 0 0 2px 0;
+	}
+	form td input.disabled {
+		font-style: italic;
+		border: solid 1pt #333;
+		margin: 2pt;
+		padding: 2pt;
+	}
+	.foot {
+		display: none;
+	}
+	.print-head, .print-foot {
+		border-color: #333;
+		border-style: solid;
+		border-width: 0;
+		font-size: 3mm;
+		color: #333;
+		line-height: 4mm;
+		overflow: hidden;
+	}
+	.print-foot {
+		border-top-width: 1pt;
+		margin-top: 5mm;
+		padding-top: 1mm;
+		border-color: #aaa;
+		color: #aaa;
+	}
+	.print-head, .print-head strong {
+		font-family: "Helvetica", Arial, sans-serif;
+		font-size: 8pt;
+	}
+	.print-head {
+		border-bottom-width: 1pt;
+		height: 18mm;
+		text-align: right;
+	}
+	.print-head img.print-logo {
+		display: block;
+		float: left;
+	}
+	div.event p.info, div.event p.info em {
+		display: block;
+		text-align: center;
+		margin: -10pt 0 5pt 0;
+		color: #666;
+		font-size: 8pt;
+	}
+	div.profilephoto div.image {
+		float: right;
+		border: solid 1px #333;
+		-webkit-border-radius: 3pt;
+		-moz-border-radius: 3pt;
+		border-radius: 3pt;
+		padding: 5px;
+		font-size: 0;
+	}
+	div.profilephoto a {
+		display: none;
+	}
+	table.score {
+		width: 100%;
+	}
+	table.score thead th {
+		text-align: left;
+		font-weight: bold;
+		font-size: 0.9em;
+		padding: 4pt;
+		width: auto;
+	}
+	table.score th {
+		text-align: left;
+		font-weight: normal;
+		font-size: 0.8em;
+		padding: 4pt 0 4pt 4pt;
+		width: 100pt;
+	}
+	table.score .score {
+		display: inline-block;
+		margin-left: 5pt;
+	}
+	table.score .score .employee {
+		display: none;
+	}
+	table.subjectPartPlanForm th, table.subjectPartPlanForm td {
+		padding: 3px;
+	}
+	table.subjectPartPlanForm th {
+		font-style: italic;
+		font-weight: normal;
+		text-align: left;
+	}
+	table.subjectPartPlanForm td {
+		white-space: pre-wrap;
+		vertical-align: top;
+		font-size: 11pt;
+		line-height: 16pt;
+	}
+	code, code * {
+		font-family: Monospace;
+	}
+}
