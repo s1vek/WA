@@ -1,51 +1,412 @@
 body {
 
     margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+   
     
-
 }
 
-.navigation {
+.row {
 
-    padding: 0 1rem;
-    width: 90%;
-    height: 75px;
+    width: 100%;
 
 }
 
 
-.nav-menu  {
+.header {
 
-    justify-content: center;
-    list-style-type: none;
     display: flex;
-    font-size: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    box-sizing: border-box;
+    margin: auto;
+    width: 60%;
 
 }
 
-.company {
+.navtitle {
 
-font-size: 20px;
+    font-size: 1.5rem;
 
+}
+
+.nav-menu {
+
+    display: flex;
+    gap:20px;
+    font-size: 1rem;
+    
 }
 
 .nav-menu li {
 
-    padding:0 1rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.hero {
+
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
-.introduction {
+.hero-content {
 
-    position: relative;
+    margin-top: 7%;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: 4rem;
+
+}
+
+.hero-content p {
+
+    margin-bottom: 2%;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+  }
+  
+.button-container {
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+  }
+  
+.button-learn-more, .button-see-demos {
+
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+  }
+  
+.button-learn-more {
+
+    background-color: #ffa500; 
     color: black;
-    text-align: center;
+
+  }
+  
+.button-see-demos {
+    
+    background-color: transparent;
+    border: 2px solid black; 
+
 }
 
-.textoverimage {
 
-    position: absolute;
+
+.blocks {
+
+    display: flex;
+    justify-content: center;
     text-align: center;
+    font-size: 1rem;
+    padding-top: 4%;
+    padding-bottom: 7%;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    gap: 25px;
+  
+}
+
+.seconddesign {
+
+    background-color: #ededed;
+    height: 80%;
+    padding: 4% 0 4% 0;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+
 
 }
+
+.designimage {
+
+    display: flex;
+    justify-content: end; 
+    align-items: center;
+    
+}
+
+.designimage img {
+
+    max-width: 60%;
+
+}
+
+.textdesign {
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    padding-left: 3%;
+    font-size: 1rem;
+    
+
+}
+
+.textdesign h2 {
+
+    font-size: 3rem;
+    margin-bottom: 2%;
+
+}
+
+
+.learnmoredesign {
+
+    background-color: #ffa500; 
+    margin-top: 2%;
+    color: black;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.thirdbranding {
+
+    background-color: white;
+    height: 80%;
+    padding: 4% 0 4% 0;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+
+}
+
+.thirdbranding h2 {
+
+    font-size: 3rem;
+    margin-bottom: 2%;
+
+}
+
+.imagebranding img {
+
+    max-width: 60%;
+    
+}
+
+.imagebranding {
+
+display: flex;
+   justify-content: start; 
+   align-items: center;
+   padding-left: 3%;
+
+}
+
+.textbranding {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40%;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+}
+
+.fourthtext h2 {
+
+    font-size: 3rem;
+    margin-bottom: 2%;
+
+}
+
+.fourthblack {
+
+    background-color: #14161b;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    color: white;
+    padding: 4% 0 4% 0;
+
+}
+
+.fourthimage {
+
+    display: flex;
+    justify-content: end; 
+    align-items: center;
+
+}
+
+.fourthblack img {
+
+    max-width: 60%;
+
+}
+
+.fourthtext {
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    padding-left: 3%;
+    font-size: 1rem;
+
+}
+
+.fifthfeatured {
+
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    height: 80%;
+    padding: 3% 0 4% 0;
+
+}
+
+.fifthimage img, .fifthimage2 img{
+
+    max-width: 60%;
+
+}
+
+.fifthimage2 {
+
+    padding-left: 3%;
+    display: flex;
+    
+
+}
+
+.textfifth {
+
+    text-align: center;
+    font-size: 2rem;
+    margin-left: 13%;
+    position: relative;
+
+}
+
+.fifthimage {
+
+    display: flex;
+    justify-content: end; 
+    align-items: center;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.teammember {
+
+    border-radius: 50%;
+    width: 20%;
+
+}
+
+.teammate1 {
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+}
+
+.teammate2 {
+
+    grid-column-start: 4;
+    grid-column-end: 3;
+
+}
+
+.team {
+
+    background-color: #ededed;
+    height: 50%;
+    padding: 4% 0 4% 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr 1fr 1fr 0.95fr;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+}
+
+.teammate {
+
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+
+}
+
+.seventh h2 {
+
+    font-size: 3rem;
+    margin-bottom: 2%;
+
+}
+
+.worktext {
+
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    font-size: 1.1rem;
+
+}
+
+.seventh {
+
+    display: flex;
+    height: 60%;
+    padding: 5% 0 5% 0;
+    background-color: #14161b;
+    color: #ffffff;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+footer {
+
+    height: 30%;
+    background-color: #ededed;
+    max-width: 60%;
+    margin: auto;
+    padding: 3% 0 3% 0;
+
+}
+
+.feedback {
+
+    margin-left: 3%;
+
+}
+
+
+
+
 
