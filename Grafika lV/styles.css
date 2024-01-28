@@ -1,0 +1,51 @@
+body {
+
+    margin: 0;
+    
+
+}
+
+.navigation {
+
+    padding: 0 1rem;
+    width: 90%;
+    height: 75px;
+
+}
+
+
+.nav-menu  {
+
+    justify-content: center;
+    list-style-type: none;
+    display: flex;
+    font-size: 15px;
+
+}
+
+.company {
+
+font-size: 20px;
+
+}
+
+.nav-menu li {
+
+    padding:0 1rem;
+
+}
+
+.introduction {
+
+    position: relative;
+    color: black;
+    text-align: center;
+}
+
+.textoverimage {
+
+    position: absolute;
+    text-align: center;
+
+}
+
