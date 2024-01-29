@@ -8,17 +8,15 @@ body {
     
 }
 
-.row {
+.fa-bars {
 
-    width: 100%;
+    visibility: hidden;
 
 }
-
 
 .header {
 
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     height: 75px;
@@ -65,6 +63,8 @@ body {
 .hero-content {
 
     margin-top: 7%;
+    width: 60%;
+    margin: auto;
 
 }
 
@@ -122,6 +122,8 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 1rem;
+    width: 60%;
+    margin: auto;
     padding-top: 4%;
     padding-bottom: 7%;
     line-height: 1.6;
@@ -137,8 +139,7 @@ body {
     padding: 4% 0 4% 0;
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-
-
+    
 }
 
 .designimage {
@@ -172,7 +173,7 @@ body {
 
 .textdesign h2 {
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2%;
 
 }
@@ -196,13 +197,13 @@ body {
     height: 80%;
     padding: 4% 0 4% 0;
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 1.1fr 1fr;   
 
 }
 
 .thirdbranding h2 {
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2%;
 
 }
@@ -215,7 +216,7 @@ body {
 
 .imagebranding {
 
-display: flex;
+   display: flex;
    justify-content: start; 
    align-items: center;
    padding-left: 3%;
@@ -235,7 +236,7 @@ display: flex;
 
 .fourthtext h2 {
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2%;
 
 }
@@ -243,7 +244,6 @@ display: flex;
 .fourthblack {
 
     background-color: #14161b;
-    height: 80%;
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     color: white;
@@ -254,6 +254,7 @@ display: flex;
 .fourthimage {
 
     display: flex;
+    height: 100%;
     justify-content: end; 
     align-items: center;
 
@@ -282,6 +283,7 @@ display: flex;
 .fifthfeatured {
 
     display: grid;
+    margin: auto;
     grid-template-columns: 1.1fr 1fr;
     height: 80%;
     padding: 3% 0 4% 0;
@@ -290,7 +292,7 @@ display: flex;
 
 .fifthimage img, .fifthimage2 img{
 
-    max-width: 60%;
+   width: 60%;
 
 }
 
@@ -304,11 +306,11 @@ display: flex;
 
 .textfifth {
 
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
     font-size: 2rem;
-    margin-left: 13%;
-    position: relative;
-
+    padding-right: 18%;
+    
 }
 
 .fifthimage {
@@ -406,6 +408,167 @@ footer {
 
 }
 
+@media  (max-width: 620px) {
+
+    .nav-menu {
+
+        display: none;
+
+    }
+    
+    .ham-nav{
+        display: block;
+        width: 35px;
+        border: 1px solid;
+        padding: 1%;
+      }
+    
+    .header {
+
+        width: 100%;
+        display: flex ;
+
+    }
+
+    .fa-bars {
+
+        visibility: visible;
+
+    }
+
+    .hero-content {
+
+        margin-bottom: 3%;
+
+    }
+
+    .imagebranding img {
+
+        max-width: 100%;
+        padding-right: 2%;
+        
+    }
+
+    .fourthblack {
+
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .fourthtext {
+       
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+
+    .fourthimage {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        max-width: 100%;
+        justify-content: left;
+        padding-left: 3%;
+
+    }
+
+    .designimage img,.fourthimage img  {
+
+        max-width: 100%;
+
+    }
+
+    .designimage {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        max-width: 100%;
+        justify-content: left;
+        padding-left: 3%;
+
+    }
+
+    .textdesign {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+    }
+
+    .textbranding {
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding-left: 2%;
+
+    }
+
+    .team {
+
+        font-size: 15px;
+        padding-left: 3%;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 40px;
+
+    }
+
+    .teammate1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+
+    }
+
+    .teammate2 {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+    }
+
+    .textfifth h2 {
+
+        padding-left: 3%;
+
+    }
+
+    .fifthimage img {
+
+        padding-bottom: 2%;
+        padding-left: 3%;
+
+    }
+
+    .fifthimage img, .fifthimage2 img{
+
+        width: 100%;
+
+     }
+
+    .main-grid {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+}
 
 
 
