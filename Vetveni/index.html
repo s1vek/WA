@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+</head>
+
+
+<body>
+
+    <h2>Zadejte délky stran trojúhelníka</h2>
+
+    <label for="side1">Strana 1:</label>
+    <input type="number" id="side1" name="side1"><br><br>
+    
+    <label for="side2">Strana 2:</label>
+    <input type="number" id="side2" name="side2"><br><br>
+    
+    <label for="side3">Strana 3:</label>
+    <input type="number" id="side3" name="side3"><br><br>
+    
+    <button onclick="isTriangleConstructible()">Ověřit sestrojitelnost</button>
+    
+    <p id="result"></p>
+
+    <h2>Zadejte dvě čísla</h2>
+
+    <label for="number1">Číslo 1:</label>
+    <input type="number" id="number1" name="number1"><br><br>
+
+    <label for="number2">Číslo 2:</label>
+    <input type="number" id="number2" name="number2"><br><br>
+
+    <button onclick="checkNumbers()">Ověřit čísla</button>
+
+    <p id="result2"></p>
+
+    <h2>Zadejte informace</h2>
+
+    <label for="vyska">Výška v m:</label>
+    <input type="number" id="vyska" name="vyska"><br><br>
+
+    <label for="vaha">Váha v kg:</label>
+    <input type="number" id="vaha" name="vaha"><br><br>
+
+    <button onlick="getBMI()">Zjistěte jak na tom jste</button>
+
+    <p id="bmiresult"></p>
+    
+    <script>
+        
+    function isTriangleConstructible() {
+        var a = document.getElementById("side1").value;
+        var b = document.getElementById("side2").value;
+        var c = document.getElementById("side3").value;
+
+        a = Number(a);
+        b = Number(b);
+        c = Number(c);
+
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            document.getElementById("result").innerHTML = "Trojúhelník je sestrojitelný.";
+        } else {
+            document.getElementById("result").innerHTML = "Trojúhelník není sestrojitelný.";
+        }
+    }
+
+    function checkNumbers() {
+    var num1 = document.getElementById("number1").value;
+    var num2 = document.getElementById("number2").value;
+
+    // Převedení na čísla
+    num1 = Number(num1);
+    num2 = Number(num2);
+
+    // Kontrola čísel
+    if (num1 === 0 || num2 === 0) {
+        document.getElementById("result2").innerHTML = "Alespoň jedno z čísel je nula.";
+    } else {
+        document.getElementById("result2").innerHTML = "Obě čísla jsou nenulová.";
+    }
+}
+
+    function getBMI () {
+
+        var vys = document.getElementById("vyska").value;
+        var vah = document.getElementById("vaha").value;
+
+        var bmi = vah / (vys * vys);
+        var stringbmi=bmi.toFixed(2);
+        var roundedbmi = Number(stringbmi);
+        
+
+        document.getElementById("bmiresult").innerHTML = "Vaše BMI: " + roundedbmi;
+
+
+    }
+
+
+
+
+
+
+    </script>
+</body>
+
+
+
+</html>
