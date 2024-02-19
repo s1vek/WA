@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="index.js">
+    </script>
+
+
+</head>
+
+<body>
+
+    <h2>Výpočet ceny cesty autem</h2>
+
+    <label for="delkaTrasy">Délka trasy (km):</label>
+    <input type="number" id="delkaTrasy" name="delkaTrasy"><br>
+
+    <label for="spotreba">Spotřeba (l/100km):</label>
+    <input type="number" id="spotreba" name="spotreba" step="0.1"><br>
+
+    <label for="cenaPHM">Cena PHM (Kč/l):</label>
+    <input type="number" id="cenaPHM" name="cenaPHM" step="0.01"><br>
+
+    <label for="pocetOsob">Počet osob:</label>
+    <input type="number" id="pocetOsob" name="pocetOsob"><br>
+
+    <button onclick="calculateTrip()">Vypočítat cenu</button>
+
+    <p id="result"></p>
+
+  
+
+</body>
+
+</html>
