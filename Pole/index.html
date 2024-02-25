@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+
+        //1,2
+        let cisla = Array.from({ length: 10 }, () => Math.floor(Math.random() * (12 - (-5) + 1)) + (-5));
+
+        document.getElementById("pole").innerText = "Pole čísel: " + cisla.join(", ");
+
+        //3
+        let soucet = cisla.reduce((acc, val) => acc + val, 0);
+        let prumer = soucet / cisla.length;
+
+        document.getElementById("prumer").innerText = "Aritmetický průměr: " + prumer.toFixed(2);
+
+        let pocetNadPrumerem = cisla.filter(cislo => cislo > prumer).length;
+
+        document.getElementById("nadPrumerem").innerText = "Počet čísel nad průměrem: " + pocetNadPrumerem;
+
+        //4
+
+        let nejmensi = Math.min(...cisla);
+        let nejvetsi = Math.max(...cisla);
+
+        document.getElementById("extremy").innerText = "Nejmenší prvek: " + nejmensi + ", Největší prvek: " + nejvetsi;
+        
+
+      });
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <h2>Výsledky</h2>
+    <p id="pole"></p>
+    <p id="prumer"></p>
+    <p id="nadPrumerem"></p>
+    <p id="extremy"></p>
+
+
+</body>
+
+
+
+</html>
