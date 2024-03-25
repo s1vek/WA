@@ -67,7 +67,7 @@
         let url = "http://lm/";
     
     
-        function removeCheckedRows() {
+        function removeChecked() {
             const checkedRows = document.querySelectorAll('input.check:checked');
             checkedRows.forEach(row => {
                 row.parentNode.parentNode.remove();     
@@ -100,7 +100,7 @@
 <body>
 
     <div id="exportForm"></div>
-    <input type="button" value="Odstraň" onclick="removeCheckedRows()">
+    <input type="button" value="Odstraň" onclick="removeChecked()">
     <input type="button" value="Seskupeni" onclick="groupEmails()">
 
 
