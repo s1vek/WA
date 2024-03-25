@@ -81,8 +81,8 @@
             checkboxes.forEach(function (checkbox) {
 
                 var row = checkbox.closest('tr');
-                var emailCell = row.querySelector('.email');
-                var email = emailCell.textContent.trim();
+                var cell = row.querySelector('.email');
+                var email = cell.textContent.trim();
                 emails.push(email);
             });
             var groupedEmails = emails.join(',');
