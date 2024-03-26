@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', (event) => {
+
+    let MathScore = [
+      ["Bar", 20, 60, "A"],
+      ["Foo", 10, 52, "B"],
+      ["Joey", 5, 24, "F"],
+      ["John", 28, 43, "A"],
+      ["Liza", 16, 51, "B"]
+    ];
+  
+    function generateTable(values) {
+  
+      let table = document.createElement('table');
+      let head = table.createTHead();
+      
+      let body = document.createElement('tbody');
+      table.appendChild(body);
+  
+      let row = head.insertRow();
+      let titlerow = ['Jméno', 'Domácí úkol', 'Zkouška', 'Známka'];
+  
+      titlerow.forEach(titlerow => {
+          let th = document.createElement('th');
+          th.textContent = titlerow;
+          row.appendChild(th);
+  
+      });
+  
+      values.forEach(rowData => {
+          let row2 = body.insertRow();
+          rowData.forEach(cellData => {
+              let cell = row2.insertCell();
+              cell.textContent = cellData;
+  
+          });
+  
+  
+      });
+  
+      document.getElementById('table').appendChild(table);
+  
+    }
+  
+    generateTable(MathScore);
+    console.log(MathScore);
+
+});
+  
+</script>
+
+
+</head>
+
+<body>
+
+    <div id="table"></div>
+
+</body>
+
+
+</html>
