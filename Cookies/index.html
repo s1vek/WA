@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+
+<script>
+function setLastVisit() {
+  var now = new Date().toLocaleString();
+  document.cookie = "lastVisit=" + now + ";path=/;max-age=" + (60*60*24*365);
+}
+
+function getLastVisit() {
+  var cookies = document.cookie.split('; ');
+  var lastVisitCookie = cookies.find(cookie => cookie.startsWith('lastVisit='));
+  return lastVisitCookie ? lastVisitCookie.split('=')[1] : null;
+}
+
+function detectMobileDevice() {
+  var isMobile = /Android|iPhone/i.test(navigator.userAgent);
+  return window.innerWidth <= 768 || isMobile;
+}
+
+window.onload = function() {
+  var lastVisit = getLastVisit();
+
+  if (lastVisit) {
+    alert('Poslední návštěva: ' + lastVisit);
+  } else {
+    alert('Vítejte na stránce');
+  }
+
+  setLastVisit();
+
+  if (detectMobileDevice()) {
+    alert('Mobil detekován');
+  } else {
+    alert('Mobil nedetekován');
+  }
+};
+</script>
+<style>
+</style>
+</head>
+<body>
+<h1>Hello World!</h1>
+</body>
+</html>
