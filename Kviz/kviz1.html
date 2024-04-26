@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question-text"></div>
+        <div id="options-container"></div>
+        <button id="prev" onclick="navigate(-1)">Previous</button>
+        <button id="next" onclick="navigate(1)">Next</button>
+        <button id="submit" onclick="submitQuiz()">Submit</button>
+    </div>
+    <script>
+       
+       const quizData = [
+    {
+        question: "Hlavní město Kazachstánu?",
+        options: ["Astana", "Ašchabad", "Moskva", "Peking"],
+        answer: ["Astana"], 
+        type: "single"
+    },
+    {
+        question: "Která čísla jsou prvočísla",
+        options: ["2", "3", "4", "11"],
+        answer: ["2","3","11"], 
+        type: "multiple"
+    },
+    {
+        question: "Kdo je prezidentem ČR?",
+        options: ["Trump", "Havel", "Obama", "Žádná z odpovědí"],
+        answer: ["Žádná z odpovědí"], 
+        type: "none"
+    },
+    {
+        question: "Největší České město?",
+        options: ["Praha", "Brno", "Liberec", "Karlovy Vary"],
+        answer: ["Praha"], 
+        type: "single"
+    },
+    {
+        question: "Jakou barvu má slunce?",
+        options: ["Žlutou", "Černá", "Bíla"],
+        answer: ["Žlutou"], 
+        type: "single"
+    }
+];
+
+        let currentQuestionIndex = 0;
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const answers = {};
+
+        function renderQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            questionText.textContent = currentQuestion.question;
+            optionsContainer.innerHTML = '';
+            currentQuestion.options.forEach(option => {
+                const label = document.createElement('label');
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = 'answer';
+                input.value = option;
+                if (answers[currentQuestionIndex] === option) {
+                    input.checked = true;
+                }
+                label.appendChild(input);
+                label.append(option);
+                optionsContainer.appendChild(label);
+            });
+        }
+
+        function navigate(direction) {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (selectedOption) {
+                answers[currentQuestionIndex] = selectedOption.value;
+            }
+            currentQuestionIndex += direction;
+            if (currentQuestionIndex >= 0 && currentQuestionIndex < quizData.length) {
+                renderQuestion();
+            } else {
+                currentQuestionIndex -= direction; 
+            }
+        }
+
+        function submitQuiz() {
+            document.querySelectorAll('input').forEach(input => input.disabled = true);
+            quizData.forEach((question, index) => {
+                const isCorrect = answers[index] === question.answer;
+                const options = optionsContainer.querySelectorAll('label');
+                options.forEach(option => {
+                    if (option.textContent.includes(question.answer)) {
+                        option.style.backgroundColor = isCorrect ? 'green' : 'red';
+                    }
+                });
+            });
+            document.getElementById('submit').disabled = true;
+        }
+
+        renderQuestion();
+    </script>
+</body>
+</html>
