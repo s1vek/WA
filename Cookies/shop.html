@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="black-block"></div>
+        <div class="header-content">
+            <h1 class="logo">Lorem</h1>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Basket</a></li>
+                </ul>
+            </nav>
+            <img class="hamburger-menu" src="img/hamburger-menu.png" alt="hamburger-menu">
+        </div>
+    </header>
+   <section class="card-wrapper">
+    <div class="card">
+        <img src="img/run.png">
+        <p class="underlined">Jailer 3000</p>
+        <button class="black-button">20 000 $</button>
+    </div>
+    <div class="card">
+        <img src="img/ritual.png">
+        <p class="underlined">Jailer Premium</p>
+        <button class="black-button">30 000 $</button>
+    </div>
+    <div class="card">
+        <img src="img/gun.png">
+        <p class="underlined">Jailer 3000X</p>
+        <button class="black-button">25 000 $</button>
+    </div>
+
+    <form action="process.php" method="post" class="odesilatel">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+   </section>
+</body>
+</html>

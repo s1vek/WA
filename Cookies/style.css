@@ -1,0 +1,394 @@
+body {
+    margin:0;
+    font-family:'Inria Serif';
+}
+
+header {
+    border-bottom:1px solid black;
+}
+
+.black-block {
+    background-color:black;
+    height:18px;
+    width:100%;
+}
+
+.header-content {
+    display:grid;
+    max-width:1920px;
+    padding-left:105px;
+    padding-right:105px;
+    grid-template-columns:auto max-content;
+    align-items:center;
+    margin:auto;
+}
+
+.header-nav > ul {
+    margin:0;
+    padding:0;
+    display:flex;
+    gap:80px;
+}
+
+.header-nav > ul > li {
+    display:inline;
+}
+
+.header-nav > ul > li > a {
+    font-size:32px;
+    text-decoration:none;
+    color:black;
+}
+
+.logo {
+    font-size:48px;
+    margin:0;
+    font-weight:normal;
+}
+
+p {
+    text-align:center;
+    font-size:32px;
+}
+
+#description1 {
+    max-width:564px;
+}
+
+#description2 {
+    max-width:758px;
+    margin-bottom:160px;
+}
+
+main {
+    max-width:1920px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:127px;
+}
+
+.hamburger-menu {
+    width:66px;
+    display:none;
+}
+
+.try-out-button {
+    display:flex;
+    font-size:32px;
+    border-radius:8px;
+    height:87px;
+    width:297px;
+    background-color:black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+}
+
+.try-out-button > a {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+}
+
+.showcase {
+    margin-top:70px;
+    margin-bottom:180px;
+    display:flex;
+    justify-content:space-evenly;
+    max-width:1200px;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.showcase > img {
+    height:450px;
+    width:298px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+footer {
+    background-color:black;
+    width:100%;
+    height:225px;
+}
+
+@media (max-width:1399px) {
+    .hamburger-menu {
+        display:block;
+    }
+
+    .header-nav {
+        display:none;
+    }
+
+    .header-content {
+        padding-left:40px;
+        padding-right:40px;
+    }
+}
+
+@media (max-width:768px) {
+    main {
+        padding-top:40px;
+    }
+
+    .showcase > img {
+        height:184px;
+        width:105px;
+    }
+    .showcase {
+        margin-bottom:20px;
+        margin-top:40px;
+    }
+    #description1 {
+        max-width:276px;
+    }
+    #description2 {
+        max-width:281px;
+    }
+    p, .try-out-button > a {
+        font-size:20px;
+    }
+
+    .try-out-button {
+        width:196px;
+        height:47px;
+    }
+
+    .hamburger-menu {
+        width:33px;
+    }
+
+    .header-content {
+        height:40px;
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+    .logo {
+        font-size:20px;
+    }
+
+
+}
+/*skibar*/
+.card-wrapper{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px;
+}
+
+.card{
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 500px;
+width: 300px;
+padding: 20px;
+border-radius: 8px;
+background-color: #d9d9d9;
+
+}
+
+.underlined{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.card img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.black-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px 10px;
+    width: 150px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 120px;
+}
+
+@media (max-width:1060px) {
+    .card-wrapper{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap:50px
+    }
+}
+
+/**/
+
+.mainbasket {
+
+  display: grid;
+  max-width: 1920px;
+  grid-template-columns: 1.45fr 0.55fr;
+  grid-template-rows: 1fr 234px ;
+  padding-top:127px;
+
+}
+
+
+.basket-card {
+
+    margin-bottom: 50px;
+    width: 80%;
+    height: 234px;
+    background-color: #d9d9d9;
+    margin-left: 100px;
+    border-radius: 5px;
+
+}
+
+.c2 {
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+.basket-card  img {
+
+    width: 214px;
+    height: 234px;
+    border-radius: 5px;
+
+}
+
+.product-info {
+
+    padding-left: 4%;
+
+}
+
+.product-details {
+
+    display: flex;
+    align-items: center;
+       
+}
+
+.headerlist {
+
+    text-align: center;
+    margin-left: 30px;
+
+}
+
+.summary-list{
+
+    list-style-type: none;
+    align-items:end;
+    margin-right: 70px;
+}
+
+.summary {
+
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    height: 100%;
+    width: 85%;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.continue-button {
+
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border: none;
+    width: 115%;
+    height: 80px;
+    font-family:'Inria Serif';
+
+}
+
+@media (max-width:940px) {
+
+    .mainbasket{
+        
+     display: flex;
+     flex-direction: column;
+     gap:50px;
+     padding-top: 100px;
+     align-items: center;
+     
+    }
+
+    .product-details {
+
+        width: 100%;
+
+    }
+
+    .product-name, .price {
+
+        text-align: left;
+        font-size: 16px;
+
+    }
+
+    .basket-card {
+
+        height: 142px;
+        width: 70%;
+        align-items: center;
+        margin-right: 100px;
+        border-radius: 5px;
+        
+    }
+
+
+    .basket-card  img {
+
+        width: 150px;
+        height: 142px;
+        border-radius: 5px;
+
+    }
+    
+
+    .basket-card {
+
+        display: flex;
+        text-align: left;
+        width: 75%;
+        font-size: 16px;
+        
+
+    }
+
+    .summary {
+
+        width: 75%;
+        font-size: 25px;
+        border-radius: 5px;
+
+    }
+
+}
+
+.odesilatel {
+
+    text-align: center;
+
+}
+
+

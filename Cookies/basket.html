@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="black-block"></div>
+        <div class="header-content">
+            <h1 class="logo">Lorem</h1>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Basket</a></li>
+                </ul>
+            </nav>
+            <img class="hamburger-menu" src="img/hamburger-menu.png" alt="hamburger-menu">
+        </div>
+    </header>
+
+    <section class="mainbasket">
+
+        <div class="basket-card c1">
+
+            <div class="product-details">
+
+                <img src="img/run.png" class="ritauljailer"> 
+            
+                <div class="product-info">
+
+                    <h3 class="product-name">Jailer 3000</h3>
+                    <p class="price">20 000$ / piece</p>
+
+                </div>
+
+
+            </div>
+           
+        </div>
+            
+
+            <div class="basket-card c2" >
+
+                <div class="product-details">
+
+                    <img src="img/ritual.png" class="ritauljailer"> 
+                
+                    <div class="product-info">
+    
+                        <h3 class="product-name">Jailer Premium</h3>
+                        <p class="price">30 000$ / piece</p>
+    
+                    </div>
+
+                </div>
+               
+            </div>
+
+            <aside class="summary">
+
+                <ul class="summary-list">
+
+                    <li class="headerlist">Order Summary</li> <br>
+                    <li><b>Subtotal : 50 000$</b></li> <br>
+                    <li><b>Shipping : 50$</b></li> <br>
+                    <li><b>Tax : 200$</b></li> <br>
+                    <li><b>Total : 50 250$</b></li> <br>
+
+                    <button class="continue-button"><b>Continue to payment -></b></button>
+
+                </ul>
+
+
+            </aside>
+
+
+        </div>
+
+        <form action="process.php" method="post" class="odesilatel">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+
+    </section>
+
+
+</body>
+
+
+</html>
