@@ -1,37 +1,24 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-
 require 'vendor/autoload.php';
-
 
 $mail = new PHPMailer(true);
 
 try {
-    
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
-    $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.example.com';                     
-    $mail->SMTPAuth   = true;                                  
-    $mail->Username   = 'user@example.com';                     
-    $mail->Password   = 'secret';                               
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
-    $mail->Port       = 465;                                    
-
    
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     
-    $mail->addAddress('ellen@example.com');               
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.example.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'your-email@example.com';
+    $mail->Password   = 'password';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
     
-    $mail->addAttachment('/var/tmp/file.tar.gz');         
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    
+    $mail->setFrom('from@example.com', 'Mailer');
+    $mail->addAddress($_POST['email'], $_POST['name']); 
 
     
     $mail->isHTML(true);                                  
@@ -44,3 +31,4 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+?>
